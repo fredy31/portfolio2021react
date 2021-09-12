@@ -1,0 +1,23 @@
+.FP-Navbar{
+    border-bottom:rgba(#fff,0.3) 1px solid;
+    body.is-lightmode &{
+        border-bottom-color:rgba(#000,0.3);
+    }
+    a{
+        text-decoration: none; color:var(--text);
+        &:hover{
+            text-decoration: none; color:var(--text);
+        }
+    }
+    h1{
+        text-transform: uppercase;
+        margin:0;
+    }
+    &.navbar-expand .navbar-nav .nav-link{
+        color:var(--text);
+        &:hover{
+            color:var(--text);
+            text-decoration: underline;
+        }
+    }
+}

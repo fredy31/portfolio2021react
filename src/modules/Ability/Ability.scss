@@ -1,0 +1,69 @@
+.FP-Ability{
+    .hex{
+        //background:purple;
+        background:#151515;
+        width:100%;
+        height:0;
+        padding-top:59%;
+        clip-path:polygon(0 100%, 0% 49%, 30% 0%, 70% 0%, 100% 49%, 100% 100%, 86% 100%, 86% 64%, 64% 28%, 36% 28%, 14% 65%, 14% 100%);
+        position:relative;
+        overflow:hidden;
+        .inner{
+            position:absolute;
+            bottom:0;
+            right:0;
+            width:100%;
+            height:100%;
+        }
+        &.level-1 .inner{clip-path: polygon(50% 100%, 0 100%, 0% 49%);}
+        &.level-2 .inner{clip-path: polygon(50% 100%, 0 100%, 0 0, 35% 0);}
+        &.level-3 .inner{clip-path: polygon(50% 100%, 0 100%, 0 0, 65% 0);}
+        &.level-4 .inner{clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 100% 51%);}
+        &.level-5 .inner{/*clip-path: polygon(50% 100%, 0 100%, 0% 25%);*/}
+        .bar{
+            width:43%;
+            height:40px;
+            position:absolute;
+            top:0;
+            left:50%;
+            transform:translateX(-50%);
+            &.bar1{
+                bottom:0;
+                top:auto;
+                left:0;
+                //transform-origin: bottom left;
+                //transform:rotate(-90deg) translateY(100%);
+                transform:rotate(-90deg) translateY(-100%);
+            }
+            &.bar2{
+                transform-origin: 10% 49%;
+                transform:translateX(-50%) rotate(-225deg);
+            }
+            &.bar4{
+                transform-origin: 90% 49%;
+                transform:translateX(-50%) rotate(225deg);
+            }
+            &.bar5{
+                bottom:0;
+                top:auto;
+                left:auto;
+                right:0;
+                //transform-origin: bottom left;
+                //transform:rotate(-90deg) translateY(100%);
+                transform:rotate(90deg) translateY(-100%);
+            }
+        }
+        &.level-1{
+            .bar2,.bar3,.bar4,.bar5{background:#888 !important;}
+        }
+        &.level-2{
+            .bar3,.bar4,.bar5{background:#888 !important;}
+        }
+        &.level-3{
+            .bar4,.bar5{background:#888 !important;}
+        }
+        &.level-4{
+            .bar5{background:#888 !important;}
+        }
+    }
+}
