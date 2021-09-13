@@ -11,14 +11,20 @@
         .inner{
             position:absolute;
             bottom:0;
-            right:0;
-            width:100%;
-            height:100%;
+            right:50%;
+            transform:translateX(50%);
+            width:200%;
+            height:200%;
+            transform-origin: bottom center;
         }
-        &.level-1 .inner{clip-path: polygon(50% 100%, 0 100%, 0% 49%);}
+        /*&.level-1 .inner{clip-path: polygon(50% 100%, 0 100%, 0% 49%);}
         &.level-2 .inner{clip-path: polygon(50% 100%, 0 100%, 0 0, 35% 0);}
         &.level-3 .inner{clip-path: polygon(50% 100%, 0 100%, 0 0, 65% 0);}
-        &.level-4 .inner{clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 100% 51%);}
+        &.level-4 .inner{clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 100% 51%);}*/
+        &.level-1 .inner{transform:translateX(50%) rotate(-150deg)}
+        &.level-2 .inner{transform:translateX(50%) rotate(-110deg)}
+        &.level-3 .inner{transform:translateX(50%) rotate(-71deg)}
+        &.level-4 .inner{transform:translateX(50%) rotate(-30deg)}
         &.level-5 .inner{/*clip-path: polygon(50% 100%, 0 100%, 0% 25%);*/}
         .bar{
             width:43%;
