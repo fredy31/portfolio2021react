@@ -2,14 +2,25 @@ import React from 'react';
 
 import {Container, Row, Col} from 'react-bootstrap';
 
+import Image from './../../modules/Image/Image'
+
+import './Intro.scss';
+
 const Intro = (props) => {
     const {text} = props;
-    return <Container className="FP-Intro">
-        <Row className="align-items-center">
-            <Col></Col>
-            <Col><div dangerouslySetInnerHTML={{__html:text}}></div></Col>
-        </Row>
-    </Container>;
+    return <div className="FP-Intro">
+        <Container>
+            <Row className="align-items-center">
+                <Col>
+                    <div class="image">
+                        <Image src="#" />
+                        <div class="hex"></div>
+                    </div>
+                </Col>
+                <Col><div dangerouslySetInnerHTML={{__html:text}}></div></Col>
+            </Row>
+        </Container>
+    </div>;
 }
 
 export default Intro;

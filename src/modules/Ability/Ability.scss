@@ -72,4 +72,14 @@
             .bar5{background:#888 !important;}
         }
     }
+    .FP-Image img{
+        max-width:45%;
+        height:60px;
+        object-fit: contain;
+        margin:-25% auto 20px;
+        display:block;
+    }
+    h3,p{
+        text-align:center;
+    }
 }
