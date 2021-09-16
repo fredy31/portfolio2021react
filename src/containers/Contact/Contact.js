@@ -1,9 +1,18 @@
 import React from 'react';
 
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 
-const Contact = () => {
-    return <div className="FP-Contact"></div>;
+import nl2br from './../../functions/nl2br'
+
+import './Contact.scss';
+
+const Contact = (props) => {
+    const {text} = props;
+    return <div className="FP-Contact" id="contact">
+        <Container>
+            <div dangerouslySetInnerHTML={{__html:nl2br(text)}}></div>
+        </Container>
+    </div>;
 }
 
 export default Contact;

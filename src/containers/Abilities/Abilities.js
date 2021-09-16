@@ -7,18 +7,21 @@ import Ability from './../../modules/Ability/Ability';
 import './Abilities.scss';
 
 const Abilities = (props) => {
-    const {abilities} = props;
+    const {abilities,titre} = props;
     var abObj = JSON.parse(abilities);
     //console.log(abObj);
-    return <div className="FP-Abilities"><Container>
-        <Row className="justify-content-center gy-4">
-            {Object.keys(abObj).map((keyName, i) => (
-                <Col lg="2" md="4" sm="6" xs="12" key={"ability_"+i}>
-                    <Ability key={"ability_"+i} ability={abObj[keyName]}></Ability>
-                </Col>
-            ))}
-        </Row>
-    </Container></div>;
+    return <div className="FP-Abilities" id="abilities">
+        <Container>
+            <h2 dangerouslySetInnerHTML={{__html:titre}}></h2>
+            <Row className="justify-content-center gy-4">
+                {Object.keys(abObj).map((keyName, i) => (
+                    <Col lg="2" md="4" sm="6" xs="12" key={"ability_"+i}>
+                        <Ability key={"ability_"+i} ability={abObj[keyName]}></Ability>
+                    </Col>
+                ))}
+            </Row>
+        </Container>
+    </div>;
 }
 
 export default Abilities;

@@ -48,10 +48,10 @@ const Main = () => {
         return <div className='FP-Main'>
             <FPNavbar sections={sections} />
             <Intro text={siteData.intro} />
-            <Abilities abilities={siteData.abilities} />
-            <Projects projects={siteData.projects} />
-            <Experience experience={siteData.experience} />
-            <Formation formation={siteData.formation} />
+            <Abilities abilities={siteData.abilities} titre={siteData.titre_abilets} />
+            <Projects projects={siteData.projects} titre={siteData.titre_projets}  />
+            <Experience experience={siteData.experience} titre={siteData.titre_exprience}  />
+            <Formation formation={siteData.formation} titre={siteData.titre_formation}  />
             <Contact text={siteData.contact} />
         </div>;
     }else{

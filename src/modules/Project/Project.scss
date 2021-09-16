@@ -1,0 +1,15 @@
+.FP-Project{
+    margin:64px 0;
+    h3{
+        margin-bottom:32px;
+    }
+    .row{
+        --bs-gutter-x:64px;
+    }
+    .flex-row-reversed{
+        flex-direction: row-reverse;
+    }
+    a{
+        color:#fff;
+    }
+}

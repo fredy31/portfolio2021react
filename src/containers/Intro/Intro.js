@@ -12,9 +12,9 @@ const Intro = (props) => {
         <Container>
             <Row className="align-items-center">
                 <Col>
-                    <div class="image">
-                        <Image src="#" />
-                        <div class="hex"></div>
+                    <div className="image">
+                        <Image src="#" webp="#" />
+                        <div className="hex"></div>
                     </div>
                 </Col>
                 <Col><div dangerouslySetInnerHTML={{__html:text}}></div></Col>
