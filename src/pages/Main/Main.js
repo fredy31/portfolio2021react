@@ -9,6 +9,7 @@ import Experience from './../../containers/Experience/Experience';
 import Formation from './../../containers/Formation/Formation';
 import Projects from './../../containers/Projects/Projects';
 import FPNavbar from './../../containers/FPNavbar/FPNavbar';
+import Logiciels from './../../containers/Logiciels/Logiciels';
 
 import './Main.scss';
 
@@ -50,6 +51,7 @@ const Main = () => {
             <Intro text={siteData.intro} />
             <Abilities abilities={siteData.abilities} titre={siteData.titre_abilets} />
             <Projects projects={siteData.projects} titre={siteData.titre_projets}  />
+            <Logiciels logiciels={siteData.logiciels} titre={siteData.titre_logiciels} />
             <Experience experience={siteData.experience} titre={siteData.titre_exprience}  />
             <Formation formation={siteData.formation} titre={siteData.titre_formation}  />
             <Contact text={siteData.contact} />

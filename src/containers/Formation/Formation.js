@@ -7,7 +7,7 @@ import './Formation.scss';
 const Formation = (props) => {
     const {formation,titre} = props;
     var expObj = JSON.parse(formation);
-    console.log(expObj);
+    //console.log(expObj);
     return <div className="FP-Formation" id="formation">
         <Container>
             <h2 dangerouslySetInnerHTML={{__html:titre}}></h2>
