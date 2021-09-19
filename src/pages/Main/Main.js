@@ -10,6 +10,7 @@ import Formation from './../../containers/Formation/Formation';
 import Projects from './../../containers/Projects/Projects';
 import FPNavbar from './../../containers/FPNavbar/FPNavbar';
 import Logiciels from './../../containers/Logiciels/Logiciels';
+import Loading from './../../containers/Loading/Loading';
 
 import './Main.scss';
 
@@ -47,6 +48,7 @@ const Main = () => {
         return <div className="FP-Error"><div dangerouslySetInnerHTML={{__html: siteData + '<br />Veuillez réessayer.'}}></div></div>
     }else if(siteData){
         return <div className='FP-Main'>
+            <Loading loading={false} />
             <FPNavbar sections={sections} />
             <Intro text={siteData.intro} />
             <Abilities abilities={siteData.abilities} titre={siteData.titre_abilets} />
@@ -57,7 +59,9 @@ const Main = () => {
             <Contact text={siteData.contact} />
         </div>;
     }else{
-        return <div className="FP-Loading"><div>Chargement</div></div>
+        return <div className='FP-Main'>
+            <Loading loading={true} />
+        </div>
     }
 }
 

@@ -10,7 +10,7 @@ const Logiciels = (props) => {
     const {logiciels, titre} = props;
     var logiObj = JSON.parse(logiciels);
     console.log(logiObj);
-    return <div class="FP-Logiciels" id="logiciels">
+    return <div className="FP-Logiciels" id="logiciels">
         <Container>
             <h2 dangerouslySetInnerHTML={{__html:titre}}></h2>
             <Row>
