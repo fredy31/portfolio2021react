@@ -1,4 +1,8 @@
 .FP-Contact{
     margin:124px 0;
     text-align: center;
+    transition:0.5s all ease-out;
+    &:not(.is-visible){
+        opacity:0;
+    }
 }

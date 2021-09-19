@@ -10,6 +10,7 @@
             height:500px;
             z-index:1;
             position:relative;
+            transition:0.3s all ease-out;
         }
         .hex{
             width:300px;
@@ -21,6 +22,14 @@
             bottom:0;
             left:50%;
             transform:translateX(-50%);
+        }
+    }
+    .text{
+        transition:0.3s all ease-out 0.15s;
+    }
+    &:not(.is-visible){
+        .image img,.text{
+            opacity:0;
         }
     }
 }

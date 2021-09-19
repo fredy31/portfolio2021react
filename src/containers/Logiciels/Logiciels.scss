@@ -4,4 +4,19 @@
         margin-bottom:24px;
         text-align:center;
     }
+    h2,.logiciel{
+        transition:0.5s all ease-out;
+    }
+    .logiciel{
+        &:nth-child(1){transition-delay:0.15s;}
+        &:nth-child(2){transition-delay:0.30s;}
+        &:nth-child(3){transition-delay:0.45s;}
+        &:nth-child(4){transition-delay:0.60s;}
+        &:nth-child(5){transition-delay:0.75s;}
+    }
+    &:not(.is-visible){
+        h2,.logiciel{
+            opacity:0;
+        }
+    }
 }

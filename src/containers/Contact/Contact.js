@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useRef} from 'react';
+import useOnScreen from '../../functions/useOnScreen';
 
 import {Container} from 'react-bootstrap';
 
@@ -8,7 +9,9 @@ import './Contact.scss';
 
 const Contact = (props) => {
     const {text} = props;
-    return <div className="FP-Contact" id="contact">
+    const blockRef = useRef();
+    const isVisible = useOnScreen(blockRef);
+    return <div className={isVisible ? "FP-Contact is-visible" : "FP-Contact"} ref={blockRef} id="contact">
         <Container>
             <div dangerouslySetInnerHTML={{__html:nl2br(text)}}></div>
         </Container>

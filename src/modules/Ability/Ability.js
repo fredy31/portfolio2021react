@@ -1,4 +1,5 @@
 import React, {useRef, useEffect} from 'react';
+import useOnScreen from '../../functions/useOnScreen';
 
 import './Ability.scss';
 
@@ -7,6 +8,7 @@ import Image from './../Image/Image.js'
 const Ability = (props) => {
     var {ability} = props;
     const imageRef = useRef();
+    const isVisible = useOnScreen(imageRef)
     //console.log(ability);
     useEffect(() => {
         //console.log(imageRef.current.getElementsByClassName('FP-Image-element')[0].width );
@@ -18,7 +20,7 @@ const Ability = (props) => {
         window.addEventListener('resize', handleResize)
         handleResize();
     }, [])
-    return <div className="FP-Ability" ref={imageRef}>
+    return <div className={isVisible ? "FP-Ability is-visible" : "FP-Ability"} ref={imageRef}>
     <div className={"hex level-"+ability.niveau}>
         <div className="inner" style={{background:ability.couleur}}></div>
     </div>
