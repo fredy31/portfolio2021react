@@ -1,4 +1,8 @@
 .FP-Job{
+    .hexcontainer{
+        max-width:250px;
+        margin:0 auto;
+    }
     .hex{
         width:100%;
         padding-top:100%;
@@ -11,7 +15,7 @@
         //background:linear-gradient(rgba(#222,0),#222);
         clip-path:polygon(0 30%,0 70%, 30% 100%, 70% 100%, 100% 70%,100% 30%, 70% 0, 30% 0);
         //position:absolute;
-        float:right;
+        //float:right;
         img{
             max-width:60%;
             max-height:60%;

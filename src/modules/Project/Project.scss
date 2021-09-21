@@ -12,7 +12,7 @@
         flex-direction: row-reverse;
     }
     a{
-        color:#fff;
+        color:var(--text);
     }
     .text,.image{
         transition:0.5s all ease-out;

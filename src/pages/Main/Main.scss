@@ -2,14 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap');
 body{
     --background:#111;
+    --background-soft:#151515;
     --text:#fff;
     font-family:'Merriweather Sans',sans-serif;
     background:var(--background);
     color:var(--text);
+    transition:0.3s all ease-out;
 }
 
 body.is-lightmode{
     --background:#eee;
+    --background-soft:#d5d5d5;
     --text:#000;
 }
 

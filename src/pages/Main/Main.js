@@ -11,6 +11,7 @@ import Projects from './../../containers/Projects/Projects';
 import FPNavbar from './../../containers/FPNavbar/FPNavbar';
 import Logiciels from './../../containers/Logiciels/Logiciels';
 import Loading from './../../containers/Loading/Loading';
+import LightModeSwitcher from '../../containers/LightModeSwitcher/LightModeSwitcher';
 
 import './Main.scss';
 
@@ -21,6 +22,12 @@ const Main = () => {
             axios({
                 method:'get',
                 url:"https://wp.fredericpilon.com/?rest_route=/wp/v2/pages/2",
+                //mode: 'no-cors',
+                headers: {
+                    //'Access-Control-Allow-Credentials':true,
+                    //"content-type": 'application/json',
+                    //'access-control-allow-origin': "*",
+                },
             }).then(function(response){
                 //console.log(response);
                 if(response.data.trmeta){
@@ -50,13 +57,14 @@ const Main = () => {
         return <div className='FP-Main'>
             <Loading loading={false} />
             <FPNavbar sections={sections} />
-            <Intro text={siteData.intro} />
+            <Intro text={siteData.intro} img={siteData.intro_img["0_src"]} webp={siteData.intro_img["0_src_webp"]} />
             <Abilities abilities={siteData.abilities} titre={siteData.titre_abilets} />
             <Projects projects={siteData.projects} titre={siteData.titre_projets}  />
             <Logiciels logiciels={siteData.logiciels} titre={siteData.titre_logiciels} />
             <Experience experience={siteData.experience} titre={siteData.titre_exprience}  />
             <Formation formation={siteData.formation} titre={siteData.titre_formation}  />
             <Contact text={siteData.contact} />
+            <LightModeSwitcher />
         </div>;
     }else{
         return <div className='FP-Main'>

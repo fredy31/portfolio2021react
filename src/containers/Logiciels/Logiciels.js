@@ -16,13 +16,13 @@ const Logiciels = (props) => {
     return <div className={isVisible ? "FP-Logiciels is-visible" : "FP-Logiciels"} id="logiciels" ref={blockRef}>
         <Container>
             <h2 dangerouslySetInnerHTML={{__html:titre}}></h2>
-            <Row>
+            <Row className="gy-4">
                 {Object.keys(logiObj).map((keyName, i) => (
                     <Col key={"logiciel_type_"+i} lg="3" md="4" sm="6" xs="12" className="logiciel">
                         <h3 dangerouslySetInnerHTML={{__html:logiObj[keyName].categorie}}></h3>
                         <Row className="align-items-center justify-content-center">
                             {Object.keys(logiObj[keyName].autres).map((keyName_autre, i_autre) => (
-                                <Col key={"logo_"+i_autre} sm="3" xs="6">
+                                <Col key={"logo_"+i_autre} sm="3" xs="3">
                                     <Image 
                                         src={logiObj[keyName].autres[keyName_autre].autre_logo_src} 
                                         webp={logiObj[keyName].autres[keyName_autre].autre_logo_src_webp} 

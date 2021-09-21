@@ -1,7 +1,9 @@
 .FP-Ability{
+    max-width:250px;
+    margin:0 auto;
     .hex{
         //background:purple;
-        background:#151515;
+        background:var(--background-soft);
         width:100%;
         height:0;
         padding-top:59%;

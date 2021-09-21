@@ -20,10 +20,12 @@ const Job = (props) => {
         window.addEventListener('resize', handleResizeJob)
         handleResizeJob();
     }, [])
-    return <Row className="FP-Job align-items-center" ref={hexJob}>
+    return <Row className="FP-Job align-items-center gy-4" ref={hexJob}>
         <Col sm="4">
-            <div className="hex" style={{backgroundColor:color}}>
-                <Image src={src} webp={webp} alt={name} />
+            <div className="hexcontainer">
+                <div className="hex" style={{backgroundColor:color}}>
+                    <Image src={src} webp={webp} alt={name} />
+                </div>
             </div>
         </Col>
         <Col sm="8">
