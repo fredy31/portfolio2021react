@@ -44,7 +44,7 @@
     }
 }
 @media print{
-    .FP-Intro{
+    body .FP-Intro{
         margin:32px 0;
         .image img,.text{
             opacity:1 !important;
@@ -55,7 +55,7 @@
                 width:33%;
                 .hex{
                     width:150px;
-                    height:150px;
+                    height:150px !important;
                 }
             }
             &.col-text{
