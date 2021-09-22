@@ -1,3 +1,7 @@
 .FP-Projets{
     margin:128px 0;
 }
+
+@media print{
+    .FP-Projects{display:none;}
+}

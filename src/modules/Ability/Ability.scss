@@ -94,3 +94,11 @@
         }
     }
 }
+@media print{
+    .FP-Ability{
+        .FP-Image img,h3,p{opacity:1 !important;}
+        .hex .inner{
+            transform: none !important;
+        }
+    }
+}

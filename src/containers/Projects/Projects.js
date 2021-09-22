@@ -3,6 +3,8 @@ import React from 'react';
 import {Container} from 'react-bootstrap';
 import Project from './../../modules/Project/Project';
 
+import './Projects.scss';
+
 const Projects = (props) => {
     const {projects, titre} = props;
     var projObj = JSON.parse(projects);

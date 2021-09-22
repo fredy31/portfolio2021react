@@ -1,3 +1,18 @@
 .FP-Abilities{
     margin:128px 0;
 }
+
+@media print{
+    .FP-Abilities{
+        margin:32px 0;
+        .row>div{
+            width:calc(100% / 6);
+            .hex{
+                display:none;
+            }
+            img{
+                margin-top:0;
+            }
+        }
+    }
+}

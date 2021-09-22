@@ -38,3 +38,12 @@
         }
     }
 }
+
+@media print{
+    .FP-Project{
+        .text,.image{
+            opacity:1;
+            transform:none !important;
+        }
+    }
+}

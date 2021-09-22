@@ -21,3 +21,10 @@
         }
     }
 }
+@media print{
+    .FP-Navbar{
+        .navbar-nav{
+            display:none !important;
+        }
+    }
+}

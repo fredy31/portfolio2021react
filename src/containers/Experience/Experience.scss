@@ -19,3 +19,20 @@
         }
     }
 }
+@media print{
+    .FP-Experience{
+        margin:32px 0;
+        h2,.experience{
+            opacity:1 !important;
+        }
+        .row>.experience{
+            width:50%;
+            .col-sm-4{
+                width:33%;
+            }
+            .col-sm-8{
+                width:66%;
+            }
+        }
+    }
+}
