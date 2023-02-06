@@ -15,7 +15,7 @@ const Abilities = (props) => {
             <h2 dangerouslySetInnerHTML={{__html:titre}}></h2>
             <Row className="justify-content-center gy-4">
                 {Object.keys(abObj).map((keyName, i) => (
-                    <Col lg="2" md="4" sm="6" xs="12" key={"ability_"+i}>
+                    <Col lg="3" md="4" sm="6" xs="12" key={"ability_"+i}>
                         <Ability key={"ability_"+i} ability={abObj[keyName]}></Ability>
                     </Col>
                 ))}
